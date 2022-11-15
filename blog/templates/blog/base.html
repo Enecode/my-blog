@@ -1,0 +1,47 @@
+{% load bootstrap4 %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+        shrink-to-fit=no">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+        {% block page_header %}
+            <a class="navbar-brand" href="{% url 'blog:index'%}">Isah Jacob</a>
+        {% endblock page_header %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog:contact' %}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/isahejacob">LinkedIn</a>
+                        </li>
+                       <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Enecode">GitHub</a>
+                       </li>
+                      <li class="nav-item">
+                            <a class="nav-link" href="https://twitter.com/IsahJakub">Twitter</a>
+                      </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="container">
+            <div class="pb-2 mb-2 border-bottom">
+            </div>
+            <div>
+            </div>
+        </main>
+    </body>
+</html>
+{% block content %}{% endblock content %}
